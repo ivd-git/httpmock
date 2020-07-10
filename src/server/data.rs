@@ -14,7 +14,7 @@ use serde_json::Value;
 use std::time::Duration;
 
 /// A general abstraction of an HTTP request for all handlers.
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Clone, Debug)]
 pub struct MockServerHttpRequest {
     pub path: String,
     pub method: String,
